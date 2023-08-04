@@ -13,12 +13,15 @@ export default function Cta() {
     <CtaWrapper>
       <Container>
         <Stack>
-          <OverTitle>Lorem ipsum dolor sit amet</OverTitle>
-          <SectionTitle>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus delectus?</SectionTitle>
+          <SectionTitle>Sleek. Stylish. Sustainable.</SectionTitle>
           <Description>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae accusamus deleniti nihil quas tempora numquam, vitae
-            culpa.
+          Air purification, reimagined. An air 
+purifier designed with your needs in mind.
           </Description>
+          <OverTitle>A NASA-recommended planter to ameliorate indoor air quality.</OverTitle>
+          <OverTitle>Type C charging spells convenience.	</OverTitle>
+          <OverTitle>A 1-hour battery backup to power clean air.</OverTitle>
+          <OverTitle>Never-seen-before portability.</OverTitle>
           <ButtonGroup>
             <NextLink href="#early-access" passHref>
               <Button>

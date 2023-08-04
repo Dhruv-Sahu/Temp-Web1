@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
@@ -11,7 +12,9 @@ import Button from './Button';
 import Container from './Container';
 import Drawer from './Drawer';
 import { HamburgerIcon } from './HamburgerIcon';
-import Logo from './Logo';
+// import Logo from './Logo';
+
+import Logo from '../public/ClimecLabs.png';
 
 const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), { ssr: false });
 
@@ -69,7 +72,7 @@ export default function Navbar({ items }: NavbarProps) {
       <Content>
         <NextLink href="/" passHref>
           <LogoWrapper>
-            <Logo />
+            <Image src='/ClimecLabs.png' alt="logo"  width="155" height="60"/>
           </LogoWrapper>
         </NextLink>
         <NavItemList>
@@ -137,20 +140,20 @@ const LogoWrapper = styled.a`
 `;
 
 const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
-  background-color: ${(p) => (p.outlined ? 'rgb(var(--primary))' : 'transparent')};
+  background-color: ${(p) => (p.outlined ? 'rgb(31, 192, 80, 0.8)' : 'transparent')};
   border-radius: 0.5rem;
   font-size: 1.3rem;
   text-transform: uppercase;
   line-height: 2;
 
   &:hover {
-    background-color: ${(p) => (p.outlined ? 'rgb(var(--primary), 0.8)' : 'transparent')};
+    background-color: ${(p) => (p.outlined ? 'rgb(31, 192, 80, 0.8)' : 'transparent')};
     transition: background-color 0.2s;
   }
 
   a {
     display: flex;
-    color: ${(p) => (p.outlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--text), 0.75)')};
+    color: ${(p) => (p.outlined ? 'rgb(31, 192, 80, 0.8)' : 'rgb(var(--text), 0.75)')};
     letter-spacing: 0.025em;
     text-decoration: none;
     padding: 0.75rem 1.5rem;

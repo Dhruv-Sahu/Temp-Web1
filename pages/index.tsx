@@ -17,17 +17,29 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
   return (
     <>
       <Head>
-        <title>{EnvVars.SITE_NAME}</title>
+        <title>Climec Labs</title>
         <meta
           name="description"
-          content="Tempor nostrud velit fugiat nostrud duis incididunt Lorem deserunt est tempor aute dolor ad elit."
+          content="A Bio-tech startup focused on imporving air quality by carbon capturing methods."
         />
       </Head>
       <HomepageWrapper>
         <WhiteBackgroundContainer>
           <Hero />
           <Partners />
-          <BasicSection imageUrl="/demo-illustration-1.svg" title="Lorem ipsum dolor sit amet consectetur." overTitle="sit amet gogo">
+          <BasicSection imageUrl="/demo-illustration-2.svg" title="AEREM Go" overTitle="Refresh, Recharge, and Repeat in style." reversed>
+            <p>
+            Immerse yourself in unrivalled air purity, boasting a lavish 16 sq. ft. of protection in your car, office, cubicle, or room.
+            The future of air purification is here. 
+            {' '}With{' '}<strong>Aerem Go</strong>, take fresh air wherever you go.
+            </p>
+            <ul>
+              <li>360° Air Filtration that surrounds you with pure air.</li>
+              <li>AQI-based lights double as a mood ring for your lungs.</li>
+              <li>HEPA & Activated Carbon Filters eradicate contaminants that stalk you.</li>
+            </ul>
+          </BasicSection>
+          <BasicSection imageUrl="/demo-illustration-1.svg" title="Revel in the embrace of pure, pristine air that surrounds you like a harmonious hug." overTitle="360° Air Filtration that surrounds you with pure air." >
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem error incidunt a doloremque voluptatem porro inventore
               voluptate quo deleniti animi laboriosam.{' '}
@@ -36,24 +48,31 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
               at suscipit quis est soluta?
             </p>
           </BasicSection>
-          <BasicSection imageUrl="/demo-illustration-2.svg" title="Lorem ipsum dolor sit." overTitle="lorem ipsum" reversed>
+          <BasicSection imageUrl="/demo-illustration-1.svg" title="Delight in your lung's vibrant well-being with air-quality lights." overTitle="AQI-based lights double as a mood ring for your lungs. " reversed>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem error incidunt a doloremque voluptatem porro inventore{' '}
-              <strong>voluptate quo deleniti animi laboriosam</strong>. Possimus ullam velit rem itaque consectetur, in distinctio?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem error incidunt a doloremque voluptatem porro inventore
+              voluptate quo deleniti animi laboriosam.{' '}
+              <Link href="/help-center">Possimus ullam velit rem itaque consectetur, in distinctio?</Link> Lorem ipsum, dolor sit amet
+              consectetur adipisicing elit. Soluta repellendus quia quos obcaecati nihil. Laudantium non accusantium, voluptate eum nesciunt
+              at suscipit quis est soluta?
             </p>
-            <ul>
-              <li>Professional point 1</li>
-              <li>Professional remark 2</li>
-              <li>Professional feature 3</li>
-            </ul>
+          </BasicSection>
+          <BasicSection imageUrl="/demo-illustration-1.svg" title="Say farewell to lurking pollutants as these filters bring down the curtain on their wicked acts." overTitle="HEPA & Activated Carbon Filters eradicate contaminants that stalk you." >
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem error incidunt a doloremque voluptatem porro inventore
+              voluptate quo deleniti animi laboriosam.{' '}
+              <Link href="/help-center">Possimus ullam velit rem itaque consectetur, in distinctio?</Link> Lorem ipsum, dolor sit amet
+              consectetur adipisicing elit. Soluta repellendus quia quos obcaecati nihil. Laudantium non accusantium, voluptate eum nesciunt
+              at suscipit quis est soluta?
+            </p>
           </BasicSection>
         </WhiteBackgroundContainer>
         <DarkerBackgroundContainer>
           <Cta />
           <FeaturesGallery />
-          <Features />
+          {/* <Features /> */}
           <Testimonials />
-          <ScrollableBlogPosts posts={posts} />
+          {/* <ScrollableBlogPosts posts={posts} /> */}
         </DarkerBackgroundContainer>
       </HomepageWrapper>
     </>
