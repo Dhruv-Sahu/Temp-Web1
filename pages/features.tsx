@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import AutofitGrid from 'components/AutofitGrid';
 import BasicCard from 'components/BasicCard';
+import BasicCard2 from 'components/BasicCard2';
 import Page from 'components/Page';
 import SectionTitle from 'components/SectionTitle';
 import YoutubeVideo from 'components/YoutubeVideo';
@@ -65,7 +66,7 @@ export default function FeaturesPage() {
           <SectionTitle>Is air quality a matter of choice, or are we simply at the mercy of our location?</SectionTitle>
           <CustomAutofitGrid>
           {IMG1.map((singleFeature, idx) => (
-            <BasicCard key={singleFeature.imageUrl} {...singleFeature} />
+            <BasicCard2 key={singleFeature.imageUrl} {...singleFeature} />
             ))}
         </CustomAutofitGrid>
           <CPara>It all started with wanting to do something for our planet and help humans move towards a brighter and healthier future. We knew we were made to serve the greater purpose of safeguarding humankind, and we are determined to shield this planet from disasters like global warming and climate change.</CPara>
