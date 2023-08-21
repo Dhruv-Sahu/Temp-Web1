@@ -1,3 +1,4 @@
+"""
 query getPostsDocument($relativePath: String!) {
   getPostsDocument(relativePath: $relativePath) {
     sys {
@@ -36,3 +37,4 @@ query getPostsList {
     }
   }
 }
+"""

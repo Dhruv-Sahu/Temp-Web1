@@ -15,10 +15,9 @@ export default function Hero() {
     <HeroWrapper>
       <Contents>
         {/* <CustomOverTitle>the coolest, saas product you have ever seen</CustomOverTitle> */}
-        <Heading>Make your life easier with our Product</Heading>
+        <Heading>We are the Avant-Garde. We are the models for the Future.</Heading>
         <Description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora qui. Explicabo voluptate iure ipsum molestias
-          repudiandae perspiciatis nostrum praesentium, unde pariatur tempora magni rem. Necessitatibus facilis obcaecati ratione.
+        Climec Labs is a pioneering climate tech startup driven by a profound commitment to restoring and healing our environment from the adverse impacts of climate change, global warming, and air pollution. We are working towards achieving UN Sustainable Development Goals 9, 11, and 13 to foster a world where humanity coexists in perfect harmony with our planet, eventually earning the distinction of an interplanetary species.
         </Description>
         <CustomButtonGroup>
           <Button onClick={() => setIsModalOpened(true)}>

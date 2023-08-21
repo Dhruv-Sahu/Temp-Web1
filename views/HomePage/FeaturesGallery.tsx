@@ -12,7 +12,7 @@ const TABS = [
   {
     title: 'Smart App Integration - Air Control at Your Fingertips!',
     description:
-      '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.</p>',
+      '<p>Effortlessly manage your air purifier and monitor air quality on the go, embracing the present moment. Seamlessly integrate convenience and real-time tracking into your lifestyle. </p>',
     imageUrl: '/demo-illustration-3.png',
     baseColor: '249,82,120',
     secondColor: '221,9,57',
@@ -20,7 +20,7 @@ const TABS = [
   {
     title: 'Odour Elimination at its Finest!',
     description:
-      '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.</p>',
+      '<p>Immerse yourself in the refreshing essence of our distinctive and captivating odour-eliminating gel, which transforms the air you breathe into an invigorating and aromatic experience, revitalizing your senses.</p>',
     imageUrl: '/demo-illustration-4.png',
     baseColor: '57,148,224',
     secondColor: '99,172,232',
@@ -28,7 +28,7 @@ const TABS = [
   {
     title: 'Double Layer Filtration - A Double Dose of Security!',
     description:
-      '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.</p>',
+      '<p>We believe in doubling the protection for you and your cherished ones,  ensuring their well-being. HEPA  and Activated Carbon filters to keep pollutants at bay. </p>',
     imageUrl: '/demo-illustration-5.png',
     baseColor: '88,193,132',
     secondColor: '124,207,158',
@@ -76,8 +76,10 @@ export default function FeaturesGallery() {
   return (
     <FeaturesGalleryWrapper>
       <Content>
-        <OverTitle>features</OverTitle>
-        <SectionTitle>What are you signing in for?</SectionTitle>
+        {/* <OverTitle></OverTitle> */}
+        <SectionTitle>Easy on the pocket and harsh on air pollutants.</SectionTitle>
+        <br/><br/>        <br/>
+
       </Content>
       <GalleryWrapper>
         <TabsContainer>{tabsMarkup}</TabsContainer>

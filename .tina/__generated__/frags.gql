@@ -1,3 +1,4 @@
+"""
 fragment PostsParts on Posts {
   title
   description
@@ -6,3 +7,4 @@ fragment PostsParts on Posts {
   imageUrl
   body
 }
+"""

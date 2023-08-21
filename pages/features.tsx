@@ -5,75 +5,87 @@ import Page from 'components/Page';
 import SectionTitle from 'components/SectionTitle';
 import YoutubeVideo from 'components/YoutubeVideo';
 import { media } from 'utils/media';
+import BasicSection from 'components/BasicSection';
+import OverTitle from '../components/OverTitle';
+import BasicSection2 from 'components/BasicSection2';
+import CtaFeatures from 'components/CtaFeatures';
+import Partners from 'views/HomePage/Partners';
+import ProductMilestones from 'components/ProductMilestones';
 
 const FEATURES = [
   {
     imageUrl: '/grid-icons/asset-1.svg',
-    title: 'Lorem ipsum dolor sit amet.',
+    title: 'Dhruv Sahu',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
+      'The Software Developer, the wizard of digital solutions.',
   },
   {
     imageUrl: '/grid-icons/asset-2.svg',
-    title: 'Lorem ipsum dolor sit amet.',
+    title: 'Sahil Sunilkumar',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
+      'Our Biotech R&D Lead, the brilliance driving breakthroughs.',
   },
   {
     imageUrl: '/grid-icons/asset-3.svg',
-    title: 'Lorem ipsum dolor sit amet.',
+    title: 'Kritika Malhotra',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
+      'The Social Media Lead, the voice of our revolution.',
   },
   {
     imageUrl: '/grid-icons/asset-4.svg',
-    title: 'Lorem ipsum dolor sit amet.',
+    title: 'Kirtivas',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
-  },
-  {
-    imageUrl: '/grid-icons/asset-5.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
-  },
-  {
-    imageUrl: '/grid-icons/asset-6.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
-  },
-  {
-    imageUrl: '/grid-icons/asset-7.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
-  },
-  {
-    imageUrl: '/grid-icons/asset-8.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
-  },
-  {
-    imageUrl: '/grid-icons/asset-9.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
-  },
+      'The Electronics Lead, the conductor of technological excellence.',
+  }
 ];
+
+const IMG1 = [
+  {
+    imageUrl: '/grid-icons/asset-1.svg',
+  },
+  {
+    imageUrl: '/grid-icons/asset-2.svg',
+  },
+  
+];
+
+
 
 export default function FeaturesPage() {
   return (
-    <Page title="Features" description="Elit aute do nisi Lorem id ea culpa sint duis eu tempor dolore elit.">
+    <Page title="About Us" description="We are the Avant-Garde. We are the models for the Future.">
       <Wrapper>
-        <SectionTitle>Check out this quick introduction</SectionTitle>
-        <YoutubeVideo url="https://www.youtube.com/watch?v=BggrpKfqh1c" />
+        <SectionTitle>Our Vision</SectionTitle>
+        {/* <YoutubeVideo url="https://www.youtube.com/watch?v=BggrpKfqh1c" /> */}
+        <BasicSection imageUrl="/demo-illustration-1.svg" title="To reverse the effects of global warming and climate change." overTitle="Inspired Direction">
+            <p>
+            At Climec Labs, we've harnessed the power of innovation to create cutting-edge direct air carbon capture solutions. With uniquely designed biotech filters, we offer you and your loved ones a remarkable 30% edge over other products, cleansing the air and nourishing the planet.
+            </p>
+          </BasicSection> 
+          <SectionTitle>Is air quality a matter of choice, or are we simply at the mercy of our location?</SectionTitle>
+          <CustomAutofitGrid>
+          {IMG1.map((singleFeature, idx) => (
+            <BasicCard key={singleFeature.imageUrl} {...singleFeature} />
+            ))}
+        </CustomAutofitGrid>
+          <CPara>It all started with wanting to do something for our planet and help humans move towards a brighter and healthier future. We knew we were made to serve the greater purpose of safeguarding humankind, and we are determined to shield this planet from disasters like global warming and climate change.</CPara>
+        <SectionTitle>Our mission is to sequester 1 billion metric tons of CO2 by 2030.</SectionTitle>
+        <CPara>*impressive visual with a countdown to 2030*</CPara>
+        {/* <SectionTitle>Crafted with Excellence!<br/>The Masterminds behind Climec Labs</SectionTitle>  */}
+        <CtaFeatures></CtaFeatures>
+        <BasicSection2 imageUrl="/demo-illustration-1.svg" title="Co-founder and CEO" overTitle='A force to be reckoned with.'></BasicSection2> 
+        <BasicSection2 imageUrl="/demo-illustration-1.svg" title="Co-founder and CTO" overTitle='The architect of innovation.' reversed></BasicSection2> 
         <CustomAutofitGrid>
           {FEATURES.map((singleFeature, idx) => (
             <BasicCard key={singleFeature.title} {...singleFeature} />
           ))}
         </CustomAutofitGrid>
+        <SectionTitle>Empowered by a Collective Force</SectionTitle>
+        <CPara>United we stand, a passionate alliance turning dreams into reality</CPara>
+        <Partners/>
+        <SectionTitle>Proud Milestones</SectionTitle>
+        <CPara>Milestones that inspire,accomplishments that fuel our drive for even greater success</CPara>
+        <ProductMilestones/>
       </Wrapper>
     </Page>
   );
@@ -84,6 +96,12 @@ const Wrapper = styled.div`
     margin-top: 10rem;
   }
 `;
+
+const CPara= styled(OverTitle)`
+  margin-bottom: 2rem;
+  line-height: 1.4;
+`;
+
 
 const CustomAutofitGrid = styled(AutofitGrid)`
   --autofit-grid-item-size: 40rem;
