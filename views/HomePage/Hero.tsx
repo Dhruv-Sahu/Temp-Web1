@@ -31,7 +31,8 @@ export default function Hero() {
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
-        <HeroIllustration />
+        {/* <HeroIllustration /> */}
+        <img src="/hero.gif" alt="Hero" />
       </ImageContainer>
     </HeroWrapper>
   );

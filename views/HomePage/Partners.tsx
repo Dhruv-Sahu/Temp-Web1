@@ -7,13 +7,21 @@ import Container from 'components/Container';
 import { media } from 'utils/media';
 
 const PARTNER_LOGOS = [
-  'logoipsum-logo-1.svg',
-  'logoipsum-logo-2.svg',
-  'logoipsum-logo-3.svg',
-  'logoipsum-logo-4.svg',
-  'logoipsum-logo-5.svg',
-  'logoipsum-logo-6.svg',
-  'logoipsum-logo-7.svg',
+  'IITK.svg',
+  'aicraise.svg',
+  'aicte.svg',
+  'atal.svg',
+  'CC-Logo.svg',
+  'city-champions.svg',
+  'google-logo.svg',
+  'HACKATHon.svg',
+  'harvard-university.svg',
+  'Incubation-centre.svg',
+  'moe.svg',
+  'NIC.svg',
+  'NSR-CEL.svg',
+  'SIIC_IITK.svg',
+  'srm-incubation.svg'
 ];
 
 export default function Partners() {
