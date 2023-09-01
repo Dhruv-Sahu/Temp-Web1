@@ -1,5 +1,5 @@
 import NextLink from 'next/link';
-import { FacebookIcon, LinkedinIcon, TwitterIcon } from 'react-share';
+import { InstapaperIcon, LinkedinIcon, TwitterIcon } from 'react-share';
 import styled from 'styled-components';
 import Container from 'components/Container';
 import { media } from 'utils/media';
@@ -57,25 +57,30 @@ export default function Footer() {
         </ListContainer>
         <BottomBar>
           <ShareBar>
-            <NextLink href="https://www.twitter.com/my-saas-startup" passHref>
-              <a>
+            <NextLink href="https://twitter.com/climeclabs" passHref>
+              <a href="https://twitter.com/climeclabs">
                 <TwitterIcon size={50} round={true} />
               </a>
             </NextLink>
 
-            <NextLink href="https://www.facebook.com/my-saas-startup" passHref>
-              <a>
-                <FacebookIcon size={50} round={true} />
+            {/* <NextLink href="https://www.facebook.com/my-saas-startup" passHref>
+              <a >
+                <FacebookIcon size={30} round={true} />
               </a>
-            </NextLink>
+            </NextLink> */}
 
-            <NextLink href="https://www.linkedin.com/my-saas-startup" passHref>
-              <a>
+            <NextLink href="https://www.linkedin.com/company/climeclabs" passHref>
+              <a href="https://www.linkedin.com/company/climeclabs">
                 <LinkedinIcon size={50} round={true} />
               </a>
             </NextLink>
+            <NextLink href="https://www.instagram.com/climeclabs/" passHref>
+              <a href="https://www.instagram.com/climeclabs/">
+                <InstapaperIcon size={50} round={true} />
+              </a>
+            </NextLink>
           </ShareBar>
-          <Copyright>&copy; Copyright 2021 My Saas Startup</Copyright>
+          <Copyright>&copy; Copyright 2023 Climeclabs</Copyright>
         </BottomBar>
       </Container>
     </FooterWrapper>
@@ -97,7 +102,7 @@ function ListItem({ title, href }: SingleFooterListItem) {
   return (
     <ListItemWrapper>
       <NextLink href={href} passHref>
-        <a>{title}</a>
+        <a href={href}>{title}</a>
       </NextLink>
     </ListItemWrapper>
   );

@@ -36,10 +36,10 @@ const Card = styled.div`
   }
 `;
 
-const Title = styled.div`
-  font-weight: bold;
-`;
+// const Title = styled.div`
+//   font-weight: bold;
+// `;
 
-const Description = styled.div`
-  opacity: 0.6;
-`;
+// const Description = styled.div`
+//   opacity: 0.6;
+// `;

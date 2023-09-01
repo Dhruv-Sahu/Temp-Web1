@@ -1,17 +1,25 @@
 import styled from 'styled-components';
+
 import AutofitGrid from 'components/AutofitGrid';
 import BasicCard from 'components/BasicCard';
 import BasicCard2 from 'components/BasicCard2';
-import Page from 'components/Page';
-import SectionTitle from 'components/SectionTitle';
-import YoutubeVideo from 'components/YoutubeVideo';
-import { media } from 'utils/media';
 import BasicSection from 'components/BasicSection';
-import OverTitle from '../components/OverTitle';
 import BasicSection2 from 'components/BasicSection2';
 import CtaFeatures from 'components/CtaFeatures';
+import OverTitle from '../components/OverTitle';
+import Page from 'components/Page';
+
+import ProductMilestones from 'components/ProductMilestones'; 
+
+import SectionTitle from 'components/SectionTitle'; 
+
+// Import of `views/HomePage/Partners` can stay here or be adjusted based on your project's conventions.
 import Partners from 'views/HomePage/Partners';
-import ProductMilestones from 'components/ProductMilestones';
+import { media } from 'utils/media';
+
+// If you decide to uncomment the YoutubeVideo import, you can place it in the appropriate position within the group.
+// import YoutubeVideo from 'components/YoutubeVideo';
+
 
 const FEATURES = [
   {
@@ -60,7 +68,7 @@ export default function FeaturesPage() {
         {/* <YoutubeVideo url="https://www.youtube.com/watch?v=BggrpKfqh1c" /> */}
         <BasicSection imageUrl="/demo-illustration-1.svg" title="To reverse the effects of global warming and climate change." overTitle="Inspired Direction">
             <p>
-            At Climec Labs, we've harnessed the power of innovation to create cutting-edge direct air carbon capture solutions. With uniquely designed biotech filters, we offer you and your loved ones a remarkable 30% edge over other products, cleansing the air and nourishing the planet.
+            At Climec Labs, we&aposve harnessed the power of innovation to create cutting-edge direct air carbon capture solutions. With uniquely designed biotech filters, we offer you and your loved ones a remarkable 30% edge over other products, cleansing the air and nourishing the planet.
             </p>
           </BasicSection> 
           <SectionTitle>Is air quality a matter of choice, or are we simply at the mercy of our location?</SectionTitle>

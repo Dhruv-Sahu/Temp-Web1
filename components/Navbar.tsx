@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
@@ -14,7 +14,7 @@ import Drawer from './Drawer';
 import { HamburgerIcon } from './HamburgerIcon';
 // import Logo from './Logo';
 
-import Logo from '../public/ClimecLabs.png';
+// import Logo from '../public/ClimecLabs.png';
 
 const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), { ssr: false });
 
@@ -105,7 +105,7 @@ function NavItem({ href, title, outlined }: SingleNavItem) {
   return (
     <NavItemWrapper outlined={outlined}>
       <NextLink href={href} passHref>
-        <a>{title}</a>
+        <a href={href}>{title}</a>
       </NextLink>
     </NavItemWrapper>
   );
