@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
 import { ScrollPositionEffectProps, useScrollPosition } from 'hooks/useScrollPosition';
@@ -12,9 +12,11 @@ import Button from './Button';
 import Container from './Container';
 import Drawer from './Drawer';
 import { HamburgerIcon } from './HamburgerIcon';
-// import Logo from './Logo';
+import { useColorMode } from '../contexts/ColorModeContext'; // Import the color mode context
 
-// import Logo from '../public/ClimecLabs.png';
+//import Logo from './Logo';
+
+//import Logo from '../public/ClimecLabs.png';
 
 const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), { ssr: false });
 
@@ -26,6 +28,7 @@ export default function Navbar({ items }: NavbarProps) {
   const router = useRouter();
   const { toggle } = Drawer.useDrawer();
   const [scrollingDirection, setScrollingDirection] = useState<ScrollingDirections>('none');
+  const { colorMode } = useColorMode(); // Get the current color mode
 
   let lastScrollY = useRef(0);
   const lastRoute = useRef('');
@@ -67,12 +70,34 @@ export default function Navbar({ items }: NavbarProps) {
   const isNavbarHidden = scrollingDirection === 'down';
   const isTransparent = scrollingDirection === 'none';
 
+  useEffect(() => {
+    // Update the current mode when the ColorSwitcher component triggers a mode change
+    const handleModeChange = () => {
+      // Set the scrollingDirection state and update the logo accordingly
+      setScrollingDirection('none');
+    };
+
+    // Add an event listener to handle mode changes
+    document.addEventListener('modeChange', handleModeChange);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('modeChange', handleModeChange);
+    };
+  }, []);
+
+
   return (
     <NavbarContainer hidden={isNavbarHidden} transparent={isTransparent}>
       <Content>
         <NextLink href="/" passHref>
           <LogoWrapper>
-            <Image src='/ClimecLabs.png' alt="logo"  width="155" height="60"/>
+          {colorMode === 'light' ? (
+              <Image src='lightmode.jpeg' alt="light-logo" width={155} height={60} />
+            ) : (
+              <Image src='darkmode.jpeg' alt="dark-logo" width={155} height={60} />
+            )}
+             
           </LogoWrapper>
         </NextLink>
         <NavItemList>
