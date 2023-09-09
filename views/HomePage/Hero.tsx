@@ -32,7 +32,7 @@ export default function Hero() {
       </Contents>
       <ImageContainer>
         {/* <HeroIllustration /> */}
-        <img src="/hero.gif" alt="Hero" />
+        <img src="/Hero.gif" alt="Change" />
       </ImageContainer>
     </HeroWrapper>
   );

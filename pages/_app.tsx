@@ -16,6 +16,8 @@ import NewsletterModal from 'components/NewsletterModal';
 import WaveCta from 'components/WaveCta';
 import { NewsletterModalContextProvider, useNewsletterModalContext } from 'contexts/newsletter-modal.context';
 import { NavItems } from 'types';
+import Script from 'next/script'
+import Layout from 'components/Layout';
 
 const navItems: NavItems = [
   { title: 'Home', href: '/' }, 
@@ -29,20 +31,40 @@ const navItems: NavItems = [
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <Layout>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="icon" type="image/png" href="/favicon.png" />
-        {/* <link rel="alternate" type="application/rss+xml" href={EnvVars.URL + 'rss'} title="RSS 2.0" /> */}
-        {/* <script
-          dangerouslySetInnerHTML={{
-            __html: `window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-          ga('create', 'UA-117119829-1', 'auto');
-          ga('send', 'pageview');`,
-        }}
-      /> */}
-        {/* <script async src="https://www.google-analytics.com/analytics.js"></script> */}
+        <script>
+            {`
+              // Hotjar Tracking Code
+              (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid: 3575186, hjsv: 6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+              })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+            `}
+          </script>
+        {/* <Script
+  strategy="lazyOnload"
+  src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
+/>
+
+<Script id="ga-script" strategy="lazyOnload">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${process.env.GOOGLE_ANALYTICS}', {
+      page_path: window.location.pathname,
+    });
+        `}
+</Script> */}
+
       </Head>
       <ColorModeScript />
       <GlobalStyle />
@@ -53,7 +75,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <WaveCta />
         <Footer />
       </Providers>
-    </>
+    </Layout>
   );
 }
 

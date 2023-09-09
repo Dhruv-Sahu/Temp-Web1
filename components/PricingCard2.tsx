@@ -4,7 +4,7 @@ import { media } from 'utils/media';
 import Button from './Button';
 import RichText from './RichText';
 import Image from 'next/image';
-import ReactGA from "react-ga4"
+
 
 interface PricingCardProps {
   title: string;
@@ -14,19 +14,7 @@ interface PricingCardProps {
   isOutlined?: boolean;
 }
 
-const handleButtonClick = () => {
-  // Redirect to the specified URL when the button is clicked
-  window.location.href = 'https://rzp.io/l/2Jp56Sc';  
-  console.log("payment evoked");
-    ReactGA.event({
-      category: 'Clicked the payment button from book an aerem',
-      action: 'Razorpay Button Clicked',
-      label: 'This button is clicked to redirect to razorpay page for payment details',
-      
-    })
-};
-
-export default function PricingCard({ title, description, imageUrl, benefits, isOutlined, children }: PropsWithChildren<PricingCardProps>) {
+export default function PricingCard2({ title, description, imageUrl, benefits, isOutlined, children }: PropsWithChildren<PricingCardProps>) {
   const isAnyBenefitPresent = benefits?.length;
 
   return (
@@ -46,7 +34,7 @@ export default function PricingCard({ title, description, imageUrl, benefits, is
           </CustomRichText>
         )}
       </PriceContainer>
-      <CustomButton onClick={handleButtonClick}>Buy Now!</CustomButton>
+      <CustomButton>Coming Out Soon!</CustomButton>
     </Wrapper>
   );
 }
@@ -111,4 +99,7 @@ const CustomRichText = styled(RichText)`
 
 const CustomButton = styled(Button)`
   width: 100%;
+  background: rgb(24, 97, 38);
+  border: 2px solid rgb(24, 97, 38); 
+  pointer-events: none;  
 `;

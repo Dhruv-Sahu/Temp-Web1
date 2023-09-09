@@ -10,9 +10,9 @@ import OverTitle from '../components/OverTitle';
 import OverTitle2 from 'components/OverTitle2';
 import Page from 'components/Page';
 import CountdownTimer from 'components/CountDownTimer';
-import ProductMilestones from 'components/ProductMilestones'; 
+import ProductMilestones from 'components/ProductMilestones';
 
-import SectionTitle from 'components/SectionTitle'; 
+import SectionTitle from 'components/SectionTitle';
 
 // Import of `views/HomePage/Partners` can stay here or be adjusted based on your project's conventions.
 import Partners from 'views/HomePage/Partners';
@@ -56,7 +56,6 @@ const IMG1 = [
   {
     imageUrl: '/grid-icons/asset-2.svg',
   },
-  
 ];
 
 
@@ -68,48 +67,48 @@ export default function FeaturesPage() {
         <SectionTitle>Our Vision</SectionTitle>
         {/* <YoutubeVideo url="https://www.youtube.com/watch?v=BggrpKfqh1c" /> */}
         <BasicSection imageUrl="/demo-illustration-1.svg" title="To reverse the effects of global warming and climate change." overTitle="Inspired Direction">
-            <p>
+          <p>
             At Climec Labs, we&aposve harnessed the power of innovation to create cutting-edge direct air carbon capture solutions. With uniquely designed biotech filters, we offer you and your loved ones a remarkable 30% edge over other products, cleansing the air and nourishing the planet.
-            </p>
-          </BasicSection> 
-          <SectionTitle>Is air quality a matter of choice, or are we simply at the mercy of our location?</SectionTitle>
-          <CustomAutofitGrid>
+          </p>
+        </BasicSection>
+        <SectionTitle>Is air quality a matter of choice, or are we simply at the mercy of our location?</SectionTitle>
+        <CustomAutofitGrid>
           {IMG1.map((singleFeature, idx) => (
             <BasicCard2 key={singleFeature.imageUrl} {...singleFeature} />
-            ))}
+          ))}
         </CustomAutofitGrid>
         <CenteredContainer>
           <CPara2>It all started with wanting to do something for our planet and help humans move towards a brighter and healthier future. We knew we were made to serve the greater purpose of safeguarding humankind, and we are determined to shield this planet from disasters like global warming and climate change.</CPara2>
         </CenteredContainer>
         <SectionTitle>
-  Our mission is to sequester{' '}
-  <span style={{ color: 'rgb(31, 192, 80)' }}>1 billion</span> metric tons of{' '}
-  <span style={{ color: 'rgb(31, 192, 80)' }}>CO2</span> by 2030.
-</SectionTitle>
+          Our mission is to sequester{' '}
+          <span style={{ color: 'rgb(31, 192, 80)' }}>1 billion</span> metric tons of{' '}
+          <span style={{ color: 'rgb(31, 192, 80)' }}>CO2</span> by 2030.
+        </SectionTitle>
         <CenteredContainer>
-        {/* <CPara>*impressive visual with a countdown to 2030*</CPara> */}
-        <CountdownTimer/>
+          {/* <CPara>*impressive visual with a countdown to 2030*</CPara> */}
+          <CountdownTimer />
         </CenteredContainer>
         {/* <SectionTitle>Crafted with Excellence!<br/>The Masterminds behind Climec Labs</SectionTitle>  */}
         <CtaFeatures></CtaFeatures>
-        <BasicSection2 imageUrl="/demo-illustration-1.svg" title="Co-founder and CEO" overTitle='A force to be reckoned with.'></BasicSection2> 
-        <BasicSection2 imageUrl="/demo-illustration-1.svg" title="Co-founder and CTO" overTitle='The architect of innovation.' reversed></BasicSection2> 
+        <BasicSection2 imageUrl="/demo-illustration-1.svg" title="Co-founder and CEO" overTitle='A force to be reckoned with.'></BasicSection2>
+        <BasicSection2 imageUrl="/demo-illustration-1.svg" title="Co-founder and CTO" overTitle='The architect of innovation.' reversed></BasicSection2>
         <CustomAutofitGrid>
           {FEATURES.map((singleFeature, idx) => (
             <BasicCard key={singleFeature.title} {...singleFeature} />
           ))}
         </CustomAutofitGrid>
         <SectionTitle>Empowered by a Collective Force</SectionTitle>
-        
+
         <CenteredContainer>
-  <CPara>United we stand, a passionate alliance turning dreams into reality</CPara>
-  </CenteredContainer>
-        <Partners/>
+          <CPara>United we stand, a passionate alliance turning dreams into reality</CPara>
+        </CenteredContainer>
+        <Partners />
         <SectionTitle>Proud Milestones</SectionTitle>
         <CenteredContainer>
-        <CPara>Milestones that inspire,accomplishments that fuel our drive for even greater success</CPara>
+          <CPara>Milestones that inspire,accomplishments that fuel our drive for even greater success</CPara>
         </CenteredContainer>
-        <ProductMilestones/>
+        <ProductMilestones />
       </Wrapper>
     </Page>
   );
@@ -121,14 +120,14 @@ const Wrapper = styled.div`
   }
 `;
 
-const CPara= styled(OverTitle)`
+const CPara = styled(OverTitle)`
   margin-bottom: 2rem;
   line-height: 1.4;
   justify-content: center;
   align-items: center;
 `;
 
-const CPara2= styled(OverTitle2)`
+const CPara2 = styled(OverTitle2)`
   margin-bottom: 2rem;
   line-height: 1.4;
   justify-content: center;
